@@ -20,8 +20,6 @@ DashKit implements Dash protocol in Swift.
   s.source_files = 'DashKit/Classes/**/*'
   s.resource_bundle = { 'DashKit' => 'DashKit/Assets/Checkpoints/*' }
 
-  s.requires_arc = true
-
   s.dependency 'BitcoinCore.swift', '~> 0.18'
   s.dependency 'OpenSslKit.swift', '~> 1.0'
   s.dependency 'Secp256k1Kit.swift', '~> 1.0'

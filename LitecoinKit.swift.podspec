@@ -20,8 +20,6 @@ LitecoinKit implements Litecoin protocol in Swift.
   s.source_files = 'LitecoinKit/Classes/**/*'
   s.resource_bundle = { 'LitecoinKit' => 'LitecoinKit/Assets/Checkpoints/*' }
 
-  s.requires_arc = true
-
   s.dependency 'BitcoinCore.swift', '~> 0.18'
   s.dependency 'OpenSslKit.swift', '~> 1.0'
   s.dependency 'Secp256k1Kit.swift', '~> 1.0'

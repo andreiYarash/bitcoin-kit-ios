@@ -256,9 +256,9 @@ SPEC CHECKSUMS:
   _NIODataStructures: 3d45d8e70a1d17a15b1dc59d102c63dbc0525ffd
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   BigInt: f668a80089607f521586bbe29513d708491ef2f7
-  BitcoinCashKit.swift: 7fd20ae2aefa155babfaef83da5375a7fce43aa9
-  BitcoinCore.swift: fc7f9503adfa550e092755167a712ecadeaacc73
-  BitcoinKit.swift: 389e0a5b3e13a857078650a9cf424b0bd4b0ee4c
+  BitcoinCashKit.swift: a19d5057e53a6d98274a455f322ecfec12000594
+  BitcoinCore.swift: 7eea61b71ab6f2317392d28548c208ff3bd113f9
+  BitcoinKit.swift: 97dd3683e5b758ed08152cfe6c276aa5dae488ce
   BlsKit.swift: e73fb332ed6a577b0f34a0da30aa5ec6c09bee55
   CNIOAtomics: 8edf08644e5e6fa0f021c239be9e8beb1cd9ef18
   CNIOBoringSSL: 2c9c96c2e95f15e83fb8d26b9738d939cc39ae33
@@ -269,10 +269,10 @@ SPEC CHECKSUMS:
   CNIOSHA1: 6df39ae8db5922d6fcdd94e15bc57118cbd6b104
   CNIOWindows: 3047f2d8165848a3936a0a755fee27c6b5ee479b
   Cuckoo: 9e258d68137c411df47c6390f72901d5276b4f03
-  DashKit.swift: da62168a8980e14d2cde05cf3652f85459233818
+  DashKit.swift: 16ed0f7daf73a05f9a7d440e743c2cbc035a0d6c
   GRDB.swift: 39b3ff769afde87a840ced4e3a327d5c6f6a6e4f
-  Hodler.swift: b5b6bd01d7aae0ae37f2318198dabad88e18dee6
-  LitecoinKit.swift: fe0f3636c8ce4741fd752c84bd0204dc8e0e58b1
+  Hodler.swift: c628fa94db9d088e7b4bbc68231d254aa6e82963
+  LitecoinKit.swift: c35203f7cd7503da426ea964c752eea62435b2fa
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   OntToolKit: 969b46835b64897b20e0c2f03a2e73ba9898563d

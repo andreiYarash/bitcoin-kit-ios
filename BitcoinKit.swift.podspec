@@ -20,8 +20,6 @@ BitcoinKit implements Bitcoin protocol in Swift.
   s.source_files = 'BitcoinKit/Classes/**/*'
   s.resource_bundle = { 'BitcoinKit' => 'BitcoinKit/Assets/Checkpoints/*' }
 
-  s.requires_arc = true
-
   s.dependency 'BitcoinCore.swift', '~> 0.18'
   s.dependency 'Hodler.swift', '~> 0.18'
   s.dependency 'OpenSslKit.swift', '~> 1.0'
