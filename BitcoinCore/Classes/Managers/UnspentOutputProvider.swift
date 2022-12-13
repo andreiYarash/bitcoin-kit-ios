@@ -46,11 +46,11 @@ extension UnspentOutputProvider: IUnspentOutputProvider {
 
 extension UnspentOutputProvider: IBalanceProvider {
 
-    var balanceInfo: BalanceInfo {
+    var balanceInfo: BitBalanceInfo {
         let spendable =  spendableUtxo.map { $0.output.value }.reduce(0, +)
         let unspendable = unspendableUtxo.map { $0.output.value }.reduce(0, +)
 
-        return BalanceInfo(spendable: spendable, unspendable: unspendable)
+        return BitBalanceInfo(spendable: spendable, unspendable: unspendable)
     }
 
 }

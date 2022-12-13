@@ -3,7 +3,7 @@ open class TransactionInfoConverter: ITransactionInfoConverter {
 
     public init() {}
 
-    public func transactionInfo(fromTransaction transactionForInfo: FullTransactionForInfo) -> TransactionInfo {
+    public func transactionInfo(fromTransaction transactionForInfo: FullTransactionForInfo) -> BitTransactionInfo {
         baseTransactionInfoConverter.transactionInfo(fromTransaction: transactionForInfo)
     }
 

@@ -1,11 +1,11 @@
 import Foundation
 
-open class TransactionInfo: ITransactionInfo, Codable {
+open class BitTransactionInfo: ITransactionInfo, Codable {
     public let uid: String
     public let transactionHash: String
     public let transactionIndex: Int
-    public let inputs: [TransactionInputInfo]
-    public let outputs: [TransactionOutputInfo]
+    public let inputs: [BitTransactionInputInfo]
+    public let outputs: [BitTransactionOutputInfo]
     public let amount: Int
     public let type: TransactionType
     public let fee: Int?
@@ -14,7 +14,7 @@ open class TransactionInfo: ITransactionInfo, Codable {
     public let status: TransactionStatus
     public let conflictingHash: String?
 
-    public required init(uid: String, transactionHash: String, transactionIndex: Int, inputs: [TransactionInputInfo], outputs: [TransactionOutputInfo],
+    public required init(uid: String, transactionHash: String, transactionIndex: Int, inputs: [BitTransactionInputInfo], outputs: [BitTransactionOutputInfo],
                          amount: Int, type: TransactionType, fee: Int?, blockHeight: Int?, timestamp: Int, status: TransactionStatus, conflictingHash: String?) {
         self.uid = uid
         self.transactionHash = transactionHash
@@ -32,7 +32,7 @@ open class TransactionInfo: ITransactionInfo, Codable {
 
 }
 
-public class TransactionInputInfo: Codable {
+public class BitTransactionInputInfo: Codable {
     public let mine: Bool
     public let address: String?
     public let value: Int?
@@ -45,7 +45,7 @@ public class TransactionInputInfo: Codable {
 
 }
 
-public class TransactionOutputInfo: Codable {
+public class BitTransactionOutputInfo: Codable {
     public let mine: Bool
     public let changeOutput: Bool
     public let value: Int
@@ -68,17 +68,17 @@ public class TransactionOutputInfo: Codable {
 
 }
 
-public struct BlockInfo {
+public struct BitBlockInfo {
     public let headerHash: String
     public let height: Int
     public let timestamp: Int?
 }
 
-public struct BalanceInfo : Equatable {
+public struct BitBalanceInfo : Equatable {
     public let spendable: Int
     public let unspendable: Int
 
-    public static func ==(lhs: BalanceInfo, rhs: BalanceInfo) -> Bool {
+    public static func ==(lhs: BitBalanceInfo, rhs: BitBalanceInfo) -> Bool {
         lhs.spendable == rhs.spendable && lhs.unspendable == rhs.unspendable
     }
 }

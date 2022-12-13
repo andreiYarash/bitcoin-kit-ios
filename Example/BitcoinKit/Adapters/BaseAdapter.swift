@@ -22,7 +22,7 @@ class BaseAdapter {
         self.abstractKit = abstractKit
     }
 
-    func transactionRecord(fromTransaction transaction: TransactionInfo) -> TransactionRecord {
+    func transactionRecord(fromTransaction transaction: BitTransactionInfo) -> TransactionRecord {
         var from = [TransactionInputOutput]()
         var to = [TransactionInputOutput]()
 
@@ -113,7 +113,7 @@ extension BaseAdapter {
         Decimal(abstractKit.balance.unspendable) / coinRate
     }
 
-    var lastBlockInfo: BlockInfo? {
+    var lastBlockInfo: BitBlockInfo? {
         abstractKit.lastBlockInfo
     }
 

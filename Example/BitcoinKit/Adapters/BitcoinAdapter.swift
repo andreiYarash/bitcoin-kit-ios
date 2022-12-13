@@ -22,7 +22,7 @@ class BitcoinAdapter: BaseAdapter {
 
 extension BitcoinAdapter: BitcoinCoreDelegate {
 
-    func transactionsUpdated(inserted: [TransactionInfo], updated: [TransactionInfo]) {
+    func transactionsUpdated(inserted: [BitTransactionInfo], updated: [BitTransactionInfo]) {
         transactionsSignal.notify()
     }
 
@@ -30,11 +30,11 @@ extension BitcoinAdapter: BitcoinCoreDelegate {
         transactionsSignal.notify()
     }
 
-    func balanceUpdated(balance: BalanceInfo) {
+    func balanceUpdated(balance: BitBalanceInfo) {
         balanceSignal.notify()
     }
 
-    func lastBlockInfoUpdated(lastBlockInfo: BlockInfo) {
+    func lastBlockInfoUpdated(lastBlockInfo: BitBlockInfo) {
         lastBlockSignal.notify()
     }
 

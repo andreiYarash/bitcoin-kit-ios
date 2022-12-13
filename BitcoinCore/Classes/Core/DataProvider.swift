@@ -13,14 +13,14 @@ class DataProvider {
 
     private let balanceUpdateSubject = PublishSubject<Void>()
 
-    public var balance: BalanceInfo {
+    public var balance: BitBalanceInfo {
         didSet {
             if !(oldValue == balance) {
                 delegate?.balanceUpdated(balance: balance)
             }
         }
     }
-    public var lastBlockInfo: BlockInfo? = nil
+    public var lastBlockInfo: BitBlockInfo? = nil
 
     weak var delegate: IDataProviderDelegate?
 
@@ -36,8 +36,8 @@ class DataProvider {
         }).disposed(by: disposeBag)
     }
 
-    private func blockInfo(fromBlock block: Block) -> BlockInfo {
-        BlockInfo(
+    private func blockInfo(fromBlock block: Block) -> BitBlockInfo {
+        BitBlockInfo(
                 headerHash: block.headerHash.reversedHex,
                 height: block.height,
                 timestamp: block.timestamp
@@ -77,7 +77,7 @@ extension DataProvider: IBlockchainDataListener {
 
 extension DataProvider: IDataProvider {
 
-    func transactions(fromUid: String?, type: TransactionFilterType?, limit: Int?) -> Single<[TransactionInfo]> {
+    func transactions(fromUid: String?, type: TransactionFilterType?, limit: Int?) -> Single<[BitTransactionInfo]> {
         Single.create { observer in
             var resolvedTimestamp: Int? = nil
             var resolvedOrder: Int? = nil
@@ -94,7 +94,7 @@ extension DataProvider: IDataProvider {
         }
     }
 
-    func transaction(hash: String) -> TransactionInfo? {
+    func transaction(hash: String) -> BitTransactionInfo? {
         guard let hash = hash.reversedData else {
             return nil
         }

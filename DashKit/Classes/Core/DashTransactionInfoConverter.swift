@@ -9,7 +9,7 @@ class DashTransactionInfoConverter: ITransactionInfoConverter {
     }
 
 
-    func transactionInfo(fromTransaction transactionForInfo: FullTransactionForInfo) -> TransactionInfo {
+    func transactionInfo(fromTransaction transactionForInfo: FullTransactionForInfo) -> BitTransactionInfo {
         let txInfo: DashTransactionInfo = baseTransactionInfoConverter.transactionInfo(fromTransaction: transactionForInfo)
         txInfo.instantTx = instantTransactionManager.isTransactionInstant(txHash: transactionForInfo.transactionWithBlock.transaction.dataHash)
         return txInfo

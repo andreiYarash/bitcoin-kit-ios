@@ -18,11 +18,11 @@ open class AbstractKit {
         bitcoinCore.stop()
     }
 
-    open var lastBlockInfo: BlockInfo? {
+    open var lastBlockInfo: BitBlockInfo? {
         bitcoinCore.lastBlockInfo
     }
 
-    open var balance: BalanceInfo {
+    open var balance: BitBalanceInfo {
         bitcoinCore.balance
     }
 
@@ -30,11 +30,11 @@ open class AbstractKit {
         bitcoinCore.syncState
     }
 
-    open func transactions(fromUid: String? = nil, type: TransactionFilterType?, limit: Int? = nil) -> Single<[TransactionInfo]> {
+    open func transactions(fromUid: String? = nil, type: TransactionFilterType?, limit: Int? = nil) -> Single<[BitTransactionInfo]> {
         bitcoinCore.transactions(fromUid: fromUid, type: type, limit: limit)
     }
 
-    open func transaction(hash: String) -> TransactionInfo? {
+    open func transaction(hash: String) -> BitTransactionInfo? {
         bitcoinCore.transaction(hash: hash)
     }
 

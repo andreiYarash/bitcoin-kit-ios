@@ -429,7 +429,7 @@ public protocol IUnspentOutputProvider {
 }
 
 public protocol IBalanceProvider {
-    var balanceInfo: BalanceInfo { get }
+    var balanceInfo: BitBalanceInfo { get }
 }
 
 public protocol IBlockSyncer: class {
@@ -452,31 +452,31 @@ protocol ISyncManagerDelegate: class {
 }
 
 public protocol ITransactionInfo: class {
-    init(uid: String, transactionHash: String, transactionIndex: Int, inputs: [TransactionInputInfo], outputs: [TransactionOutputInfo], amount: Int, type: TransactionType, fee: Int?, blockHeight: Int?, timestamp: Int, status: TransactionStatus, conflictingHash: String?)
+    init(uid: String, transactionHash: String, transactionIndex: Int, inputs: [BitTransactionInputInfo], outputs: [BitTransactionOutputInfo], amount: Int, type: TransactionType, fee: Int?, blockHeight: Int?, timestamp: Int, status: TransactionStatus, conflictingHash: String?)
 }
 
 public protocol ITransactionInfoConverter {
     var baseTransactionInfoConverter: IBaseTransactionInfoConverter! { get set }
-    func transactionInfo(fromTransaction transactionForInfo: FullTransactionForInfo) -> TransactionInfo
+    func transactionInfo(fromTransaction transactionForInfo: FullTransactionForInfo) -> BitTransactionInfo
 }
 
 protocol IDataProvider {
     var delegate: IDataProviderDelegate? { get set }
 
-    var lastBlockInfo: BlockInfo? { get }
-    var balance: BalanceInfo { get }
+    var lastBlockInfo: BitBlockInfo? { get }
+    var balance: BitBalanceInfo { get }
     func debugInfo(network: INetwork, scriptType: ScriptType, addressConverter: IAddressConverter) -> String
-    func transactions(fromUid: String?, type: TransactionFilterType?, limit: Int?) -> Single<[TransactionInfo]>
-    func transaction(hash: String) -> TransactionInfo?
+    func transactions(fromUid: String?, type: TransactionFilterType?, limit: Int?) -> Single<[BitTransactionInfo]>
+    func transaction(hash: String) -> BitTransactionInfo?
 
     func rawTransaction(transactionHash: String) -> String?
 }
 
 protocol IDataProviderDelegate: class {
-    func transactionsUpdated(inserted: [TransactionInfo], updated: [TransactionInfo])
+    func transactionsUpdated(inserted: [BitTransactionInfo], updated: [BitTransactionInfo])
     func transactionsDeleted(hashes: [String])
-    func balanceUpdated(balance: BalanceInfo)
-    func lastBlockInfoUpdated(lastBlockInfo: BlockInfo)
+    func balanceUpdated(balance: BitBalanceInfo)
+    func lastBlockInfoUpdated(lastBlockInfo: BitBlockInfo)
 }
 
 public protocol INetwork: class {

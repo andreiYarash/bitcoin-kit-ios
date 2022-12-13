@@ -153,7 +153,7 @@ public class Kit: AbstractKit {
         bitcoinCore.add(restoreKeyConverter: Bip44RestoreKeyConverter(addressConverter: base58AddressConverter))
     }
 
-    private func cast(transactionInfos:[TransactionInfo]) -> [DashTransactionInfo] {
+    private func cast(transactionInfos:[BitTransactionInfo]) -> [DashTransactionInfo] {
         transactionInfos.compactMap { $0 as? DashTransactionInfo }
     }
 
@@ -173,7 +173,7 @@ public class Kit: AbstractKit {
 
 extension Kit: BitcoinCoreDelegate {
 
-    public func transactionsUpdated(inserted: [TransactionInfo], updated: [TransactionInfo]) {
+    public func transactionsUpdated(inserted: [BitTransactionInfo], updated: [BitTransactionInfo]) {
         // check for all new transactions if it's has instant lock
         inserted.compactMap { Data(hex : $0.transactionHash) }.forEach { instantSend?.handle(insertedTxHash: $0) }
 
@@ -184,11 +184,11 @@ extension Kit: BitcoinCoreDelegate {
         delegate?.transactionsDeleted(hashes: hashes)
     }
 
-    public func balanceUpdated(balance: BalanceInfo) {
+    public func balanceUpdated(balance: BitBalanceInfo) {
         delegate?.balanceUpdated(balance: balance)
     }
 
-    public func lastBlockInfoUpdated(lastBlockInfo: BlockInfo) {
+    public func lastBlockInfoUpdated(lastBlockInfo: BitBlockInfo) {
         delegate?.lastBlockInfoUpdated(lastBlockInfo: lastBlockInfo)
     }
 

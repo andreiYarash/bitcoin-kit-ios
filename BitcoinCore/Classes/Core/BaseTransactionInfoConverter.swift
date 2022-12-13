@@ -1,7 +1,7 @@
 import UIExtensions
 
 public protocol IBaseTransactionInfoConverter {
-    func transactionInfo<T: TransactionInfo>(fromTransaction transactionForInfo: FullTransactionForInfo) -> T
+    func transactionInfo<T: BitTransactionInfo>(fromTransaction transactionForInfo: FullTransactionForInfo) -> T
 }
 
 public class BaseTransactionInfoConverter: IBaseTransactionInfoConverter {
@@ -11,13 +11,13 @@ public class BaseTransactionInfoConverter: IBaseTransactionInfoConverter {
         self.pluginManager = pluginManager
     }
 
-    public func transactionInfo<T: TransactionInfo>(fromTransaction transactionForInfo: FullTransactionForInfo) -> T {
+    public func transactionInfo<T: BitTransactionInfo>(fromTransaction transactionForInfo: FullTransactionForInfo) -> T {
         if let invalidTransactionInfo: T = transactionInfo(fromInvalidTransaction: transactionForInfo) {
             return invalidTransactionInfo
         }
 
-        var inputsInfo = [TransactionInputInfo]()
-        var outputsInfo = [TransactionOutputInfo]()
+        var inputsInfo = [BitTransactionInputInfo]()
+        var outputsInfo = [BitTransactionOutputInfo]()
         let transaction = transactionForInfo.transactionWithBlock.transaction
         let transactionTimestamp = transaction.timestamp
 
@@ -33,11 +33,11 @@ public class BaseTransactionInfoConverter: IBaseTransactionInfoConverter {
                 }
             }
 
-            inputsInfo.append(TransactionInputInfo(mine: mine, address: inputWithPreviousOutput.input.address, value: value))
+            inputsInfo.append(BitTransactionInputInfo(mine: mine, address: inputWithPreviousOutput.input.address, value: value))
         }
 
         for output in transactionForInfo.outputs {
-            let outputInfo = TransactionOutputInfo(mine: output.publicKeyPath != nil, changeOutput: output.changeOutput, value: output.value, address: output.address)
+            let outputInfo = BitTransactionOutputInfo(mine: output.publicKeyPath != nil, changeOutput: output.changeOutput, value: output.value, address: output.address)
 
             if let pluginId = output.pluginId, let pluginDataString = output.pluginData {
                 outputInfo.pluginId = pluginId
@@ -64,7 +64,7 @@ public class BaseTransactionInfoConverter: IBaseTransactionInfoConverter {
         )
     }
 
-    private func transactionInfo<T: TransactionInfo>(fromInvalidTransaction transactionForInfo: FullTransactionForInfo) -> T? {
+    private func transactionInfo<T: BitTransactionInfo>(fromInvalidTransaction transactionForInfo: FullTransactionForInfo) -> T? {
         guard let invalidTransaction = transactionForInfo.transactionWithBlock.transaction as? InvalidTransaction else {
             return nil
         }

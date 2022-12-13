@@ -131,11 +131,11 @@ extension BitcoinCore {
 
 extension BitcoinCore {
 
-    public var lastBlockInfo: BlockInfo? {
+    public var lastBlockInfo: BitBlockInfo? {
         dataProvider.lastBlockInfo
     }
 
-    public var balance: BalanceInfo {
+    public var balance: BitBalanceInfo {
         dataProvider.balance
     }
 
@@ -143,11 +143,11 @@ extension BitcoinCore {
         syncManager.syncState
     }
 
-    public func transactions(fromUid: String? = nil, type: TransactionFilterType?, limit: Int? = nil) -> Single<[TransactionInfo]> {
+    public func transactions(fromUid: String? = nil, type: TransactionFilterType?, limit: Int? = nil) -> Single<[BitTransactionInfo]> {
         dataProvider.transactions(fromUid: fromUid, type: type, limit: limit)
     }
 
-    public func transaction(hash: String) -> TransactionInfo? {
+    public func transaction(hash: String) -> BitTransactionInfo? {
         dataProvider.transaction(hash: hash)
     }
 
@@ -261,7 +261,7 @@ extension BitcoinCore {
 
 extension BitcoinCore: IDataProviderDelegate {
 
-    func transactionsUpdated(inserted: [TransactionInfo], updated: [TransactionInfo]) {
+    func transactionsUpdated(inserted: [BitTransactionInfo], updated: [BitTransactionInfo]) {
         delegateQueue.async { [weak self] in
             if let kit = self {
                 kit.delegate?.transactionsUpdated(inserted: inserted, updated: updated)
@@ -275,7 +275,7 @@ extension BitcoinCore: IDataProviderDelegate {
         }
     }
 
-    func balanceUpdated(balance: BalanceInfo) {
+    func balanceUpdated(balance: BitBalanceInfo) {
         delegateQueue.async { [weak self] in
             if let kit = self {
                 kit.delegate?.balanceUpdated(balance: balance)
@@ -283,7 +283,7 @@ extension BitcoinCore: IDataProviderDelegate {
         }
     }
 
-    func lastBlockInfoUpdated(lastBlockInfo: BlockInfo) {
+    func lastBlockInfoUpdated(lastBlockInfo: BitBlockInfo) {
         delegateQueue.async { [weak self] in
             if let kit = self {
                 kit.delegate?.lastBlockInfoUpdated(lastBlockInfo: lastBlockInfo)
@@ -302,19 +302,19 @@ extension BitcoinCore: ISyncManagerDelegate {
 }
 
 public protocol BitcoinCoreDelegate: class {
-    func transactionsUpdated(inserted: [TransactionInfo], updated: [TransactionInfo])
+    func transactionsUpdated(inserted: [BitTransactionInfo], updated: [BitTransactionInfo])
     func transactionsDeleted(hashes: [String])
-    func balanceUpdated(balance: BalanceInfo)
-    func lastBlockInfoUpdated(lastBlockInfo: BlockInfo)
+    func balanceUpdated(balance: BitBalanceInfo)
+    func lastBlockInfoUpdated(lastBlockInfo: BitBlockInfo)
     func kitStateUpdated(state: BitcoinCore.KitState)
 }
 
 extension BitcoinCoreDelegate {
 
-    public func transactionsUpdated(inserted: [TransactionInfo], updated: [TransactionInfo]) {}
+    public func transactionsUpdated(inserted: [BitTransactionInfo], updated: [BitTransactionInfo]) {}
     public func transactionsDeleted(hashes: [String]) {}
-    public func balanceUpdated(balance: BalanceInfo) {}
-    public func lastBlockInfoUpdated(lastBlockInfo: BlockInfo) {}
+    public func balanceUpdated(balance: BitBalanceInfo) {}
+    public func lastBlockInfoUpdated(lastBlockInfo: BitBlockInfo) {}
     public func kitStateUpdated(state: BitcoinCore.KitState) {}
 
 }

@@ -69,7 +69,7 @@
 //        let disposeBag = DisposeBag()
 //        let transactions = self.transactions()
 //
-//        var results = [TransactionInfo]()
+//        var results = [BitTransactionInfo]()
 //        dataProvider.transactions(fromHash: nil, limit: 3).subscribe(
 //                onSuccess: { transactionInfos in
 //                    results = transactionInfos
@@ -134,7 +134,7 @@
 //
 //    func testOnInsertBlock() {
 //        let block = TestData.firstBlock
-//        let blockInfo = BlockInfo(
+//        let blockInfo = BitBlockInfo(
 //                headerHash: block.headerHashReversedHex,
 //                height: block.height,
 //                timestamp: block.header.timestamp

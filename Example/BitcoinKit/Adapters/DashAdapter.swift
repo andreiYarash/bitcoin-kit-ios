@@ -28,7 +28,7 @@ class DashAdapter: BaseAdapter {
     }
 
     private func transactionRecord(fromTransaction transaction: DashTransactionInfo) -> TransactionRecord {
-        var record = transactionRecord(fromTransaction: transaction as TransactionInfo)
+        var record = transactionRecord(fromTransaction: transaction as BitTransactionInfo)
         if transaction.instantTx {
             record.transactionExtraType = "Instant"
         }
@@ -51,11 +51,11 @@ extension DashAdapter: DashKitDelegate {
         transactionsSignal.notify()
     }
 
-    func balanceUpdated(balance: BalanceInfo) {
+    func balanceUpdated(balance: BitBalanceInfo) {
         balanceSignal.notify()
     }
 
-    func lastBlockInfoUpdated(lastBlockInfo: BlockInfo) {
+    func lastBlockInfoUpdated(lastBlockInfo: BitBlockInfo) {
         lastBlockSignal.notify()
     }
 

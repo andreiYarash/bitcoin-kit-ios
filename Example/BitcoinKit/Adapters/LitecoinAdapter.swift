@@ -23,7 +23,7 @@ class LitecoinAdapter: BaseAdapter {
 
 extension LitecoinAdapter: BitcoinCoreDelegate {
 
-    func transactionsUpdated(inserted: [TransactionInfo], updated: [TransactionInfo]) {
+    func transactionsUpdated(inserted: [BitTransactionInfo], updated: [BitTransactionInfo]) {
         transactionsSignal.notify()
     }
 
@@ -31,11 +31,11 @@ extension LitecoinAdapter: BitcoinCoreDelegate {
         transactionsSignal.notify()
     }
 
-    func balanceUpdated(balance: BalanceInfo) {
+    func balanceUpdated(balance: BitBalanceInfo) {
         balanceSignal.notify()
     }
 
-    func lastBlockInfoUpdated(lastBlockInfo: BlockInfo) {
+    func lastBlockInfoUpdated(lastBlockInfo: BitBlockInfo) {
         lastBlockSignal.notify()
     }
 
