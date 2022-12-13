@@ -1,4 +1,4 @@
-import HdWalletKit
+
 
 public enum Bip: CustomStringConvertible {
     case bip44

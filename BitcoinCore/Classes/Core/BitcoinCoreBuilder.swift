@@ -1,5 +1,5 @@
 import Foundation
-import HdWalletKit
+
 import OntToolKit
 
 public class BitcoinCoreBuilder {

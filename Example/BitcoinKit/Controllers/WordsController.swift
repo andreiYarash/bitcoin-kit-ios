@@ -1,5 +1,5 @@
 import UIKit
-import HdWalletKit
+import BitcoinCore
 
 class WordsController: UIViewController {
 

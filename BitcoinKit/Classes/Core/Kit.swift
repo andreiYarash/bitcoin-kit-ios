@@ -1,5 +1,5 @@
 import BitcoinCore
-import HdWalletKit
+
 import Hodler
 import BigInt
 import RxSwift

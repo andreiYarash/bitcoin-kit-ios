@@ -3,7 +3,7 @@ import BitcoinCore
 import OntToolKit
 import DashKit
 import RxSwift
-import HdWalletKit
+
 
 class DashAdapter: BaseAdapter {
     override var feeRate: Int { return 1 }

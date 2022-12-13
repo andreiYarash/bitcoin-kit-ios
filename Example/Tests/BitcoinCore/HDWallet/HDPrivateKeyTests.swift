@@ -1,6 +1,6 @@
 import XCTest
 import Cuckoo
-import HdWalletKit
+
 @testable import BitcoinCore
 
 class HDPrivateKeyTests: XCTestCase {

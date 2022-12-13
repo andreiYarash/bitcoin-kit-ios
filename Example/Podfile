@@ -9,7 +9,6 @@ target 'BitcoinKitExample' do
   pod 'LitecoinKit.swift', :path => '../'
   pod 'Hodler.swift', :path => '../'
   pod 'OntToolKit', git: 'https://github.com/fish-yan/OntToolKit'
-  pod 'HdWalletKit.swift', git: 'https://github.com/horizontalsystems/hd-wallet-kit-ios'
   pod 'UIExtensions.swift', git: 'https://github.com/horizontalsystems/gui-kit/'
 end
 

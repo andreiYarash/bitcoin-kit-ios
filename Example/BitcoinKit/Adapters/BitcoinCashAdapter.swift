@@ -2,7 +2,7 @@ import BitcoinCashKit
 import BitcoinCore
 import OntToolKit
 import RxSwift
-import HdWalletKit
+
 
 class BitcoinCashAdapter: BaseAdapter {
     let bitcoinCashKit: Kit

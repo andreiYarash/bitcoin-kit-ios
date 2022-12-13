@@ -6,7 +6,6 @@ PODS:
     - BigInt (~> 5.0)
     - BitcoinCore.swift (~> 0.18)
     - GRDB.swift (~> 5.0)
-    - HdWalletKit.swift (~> 1.5)
     - ObjectMapper (~> 4.0)
     - OpenSslKit.swift (~> 1.0)
     - RxSwift (~> 6.0)
@@ -14,7 +13,6 @@ PODS:
   - BitcoinCore.swift (0.18):
     - BigInt (~> 5.0)
     - GRDB.swift (~> 5.0)
-    - HdWalletKit.swift (~> 1.5)
     - ObjectMapper (~> 4.0)
     - OntToolKit
     - OpenSslKit.swift (~> 1.0)
@@ -26,7 +24,6 @@ PODS:
     - BigInt (~> 5.0)
     - BitcoinCore.swift (~> 0.18)
     - GRDB.swift (~> 5.0)
-    - HdWalletKit.swift (~> 1.5)
     - Hodler.swift (~> 0.18)
     - ObjectMapper (~> 4.0)
     - OpenSslKit.swift (~> 1.0)
@@ -50,7 +47,6 @@ PODS:
     - BitcoinCore.swift (~> 0.18)
     - BlsKit.swift (~> 1.0)
     - GRDB.swift (~> 5.0)
-    - HdWalletKit.swift (~> 1.5)
     - ObjectMapper (~> 4.0)
     - OpenSslKit.swift (~> 1.0)
     - RxSwift (~> 6.0)
@@ -59,9 +55,6 @@ PODS:
   - GRDB.swift (5.25.0):
     - GRDB.swift/standard (= 5.25.0)
   - GRDB.swift/standard (5.25.0)
-  - HdWalletKit.swift (1.5.1):
-    - OpenSslKit.swift (~> 1.0)
-    - Secp256k1Kit.swift (~> 1.0)
   - Hodler.swift (0.18):
     - BitcoinCore.swift (~> 0.18)
     - OpenSslKit.swift (~> 1.0)
@@ -70,7 +63,6 @@ PODS:
     - BigInt (~> 5.0)
     - BitcoinCore.swift (~> 0.18)
     - GRDB.swift (~> 5.0)
-    - HdWalletKit.swift (~> 1.5)
     - ObjectMapper (~> 4.0)
     - OpenSslKit.swift (~> 1.0)
     - RxSwift (~> 6.0)
@@ -191,7 +183,6 @@ DEPENDENCIES:
   - BitcoinKit.swift (from `../`)
   - Cuckoo
   - DashKit.swift (from `../`)
-  - HdWalletKit.swift (from `https://github.com/horizontalsystems/hd-wallet-kit-ios`)
   - Hodler.swift (from `../`)
   - LitecoinKit.swift (from `../`)
   - Nimble
@@ -244,8 +235,6 @@ EXTERNAL SOURCES:
     :path: "../"
   DashKit.swift:
     :path: "../"
-  HdWalletKit.swift:
-    :git: https://github.com/horizontalsystems/hd-wallet-kit-ios
   Hodler.swift:
     :path: "../"
   LitecoinKit.swift:
@@ -256,9 +245,6 @@ EXTERNAL SOURCES:
     :git: https://github.com/horizontalsystems/gui-kit/
 
 CHECKOUT OPTIONS:
-  HdWalletKit.swift:
-    :commit: 35f6e0272d74699610df1583759d909148f24a12
-    :git: https://github.com/horizontalsystems/hd-wallet-kit-ios
   OntToolKit:
     :commit: 05ab49d635605e2795fe23e6acf43c65306bdfc2
     :git: https://github.com/fish-yan/OntToolKit
@@ -270,9 +256,9 @@ SPEC CHECKSUMS:
   _NIODataStructures: 3d45d8e70a1d17a15b1dc59d102c63dbc0525ffd
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   BigInt: f668a80089607f521586bbe29513d708491ef2f7
-  BitcoinCashKit.swift: cba5cbf04052cc06b5f39186877d91b4dc26965d
-  BitcoinCore.swift: 64a983a54859b5aeeebaf516e2c897f179e389d6
-  BitcoinKit.swift: 2042f2db5f1d1336ed875761db693ed828af28fb
+  BitcoinCashKit.swift: 7fd20ae2aefa155babfaef83da5375a7fce43aa9
+  BitcoinCore.swift: fc7f9503adfa550e092755167a712ecadeaacc73
+  BitcoinKit.swift: 389e0a5b3e13a857078650a9cf424b0bd4b0ee4c
   BlsKit.swift: e73fb332ed6a577b0f34a0da30aa5ec6c09bee55
   CNIOAtomics: 8edf08644e5e6fa0f021c239be9e8beb1cd9ef18
   CNIOBoringSSL: 2c9c96c2e95f15e83fb8d26b9738d939cc39ae33
@@ -283,11 +269,10 @@ SPEC CHECKSUMS:
   CNIOSHA1: 6df39ae8db5922d6fcdd94e15bc57118cbd6b104
   CNIOWindows: 3047f2d8165848a3936a0a755fee27c6b5ee479b
   Cuckoo: 9e258d68137c411df47c6390f72901d5276b4f03
-  DashKit.swift: 9eddbd4457370099c7118488ab46f3de3febbbf0
+  DashKit.swift: da62168a8980e14d2cde05cf3652f85459233818
   GRDB.swift: 39b3ff769afde87a840ced4e3a327d5c6f6a6e4f
-  HdWalletKit.swift: 30b1ab08c736422eeefe346369ced89574e2ec00
   Hodler.swift: b5b6bd01d7aae0ae37f2318198dabad88e18dee6
-  LitecoinKit.swift: 0f31a682ab53e7e62168f244925b08658bd751e6
+  LitecoinKit.swift: fe0f3636c8ce4741fd752c84bd0204dc8e0e58b1
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   OntToolKit: 969b46835b64897b20e0c2f03a2e73ba9898563d
@@ -309,6 +294,6 @@ SPEC CHECKSUMS:
   UIExtensions.swift: 3ed084c0343ddd0f86c7c558d37759e1fd7d5778
   X11Kit.swift: 6cfd05473e41c7b866c1a016300da02af63ad049
 
-PODFILE CHECKSUM: 7546e4e50d55eed3644e67dd6921224befd64079
+PODFILE CHECKSUM: 07e66199021acb9ea70e0b5cb4f3621d34ce9712
 
 COCOAPODS: 1.11.3

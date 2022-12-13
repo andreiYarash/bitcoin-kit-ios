@@ -1,6 +1,5 @@
 import BitcoinKit
 import BitcoinCore
-import HdWalletKit
 import OntToolKit
 import RxSwift
 
