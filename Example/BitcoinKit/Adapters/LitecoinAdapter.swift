@@ -1,7 +1,7 @@
 import LitecoinKit
 import BitcoinCore
 import HdWalletKit
-import HsToolKit
+import OntToolKit
 import RxSwift
 
 class LitecoinAdapter: BaseAdapter {

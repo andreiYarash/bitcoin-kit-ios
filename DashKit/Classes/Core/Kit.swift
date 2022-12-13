@@ -2,7 +2,7 @@ import BitcoinCore
 import HdWalletKit
 import BigInt
 import RxSwift
-import HsToolKit
+import OntToolKit
 
 public class Kit: AbstractKit {
     private static let name = "DashKit"

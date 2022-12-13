@@ -143,7 +143,7 @@ extension BaseAdapter {
                 _ = try self.abstractKit.send(to: address, value: satoshiAmount, feeRate: self.feeRate, sortType: sortType, pluginData: pluginData)
                 observer(.success(()))
             } catch {
-                observer(.error(error))
+                observer(.failure(error))
             }
 
             return Disposables.create()

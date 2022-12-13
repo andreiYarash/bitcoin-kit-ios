@@ -1,4 +1,4 @@
-import HsToolKit
+import OntToolKit
 
 class PluginManager {
     enum PluginError: Error {

@@ -1,6 +1,6 @@
 import HdWalletKit
 import RxSwift
-import HsToolKit
+import OntToolKit
 
 class InitialSyncer {
     weak var delegate: IInitialSyncerDelegate?

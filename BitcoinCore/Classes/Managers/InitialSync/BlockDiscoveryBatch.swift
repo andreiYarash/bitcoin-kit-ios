@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 import ObjectMapper
-import HsToolKit
+import OntToolKit
 
 class BlockDiscoveryBatch {
     private let wallet: IHDWallet

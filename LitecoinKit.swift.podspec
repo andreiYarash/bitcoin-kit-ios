@@ -28,7 +28,7 @@ LitecoinKit implements Litecoin protocol in Swift.
   s.dependency 'HdWalletKit.swift', '~> 1.5'
 
   s.dependency 'ObjectMapper', '~> 4.0'
-  s.dependency 'RxSwift', '~> 5.0'
+  s.dependency 'RxSwift', '~> 6.0'
   s.dependency 'BigInt', '~> 5.0'
   s.dependency 'GRDB.swift', '~> 5.0'
 end

@@ -2,7 +2,7 @@ import BitcoinCore
 import HdWalletKit
 import BigInt
 import RxSwift
-import HsToolKit
+import OntToolKit
 
 public class Kit: AbstractKit {
     private static let heightInterval = 2016                                    // Default block count in difficulty change circle

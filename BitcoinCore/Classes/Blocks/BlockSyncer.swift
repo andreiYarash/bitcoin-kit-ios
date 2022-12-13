@@ -1,4 +1,4 @@
-import HsToolKit
+import OntToolKit
 
 class BlockSyncer {
     weak var listener: IBlockSyncListener?

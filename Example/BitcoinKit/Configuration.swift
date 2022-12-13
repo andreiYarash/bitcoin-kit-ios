@@ -1,5 +1,5 @@
 import BitcoinCore
-import HsToolKit
+import OntToolKit
 
 class Configuration {
     static let shared = Configuration()

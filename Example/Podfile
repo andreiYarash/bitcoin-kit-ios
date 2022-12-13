@@ -8,7 +8,7 @@ target 'BitcoinKitExample' do
   pod 'DashKit.swift', :path => '../'
   pod 'LitecoinKit.swift', :path => '../'
   pod 'Hodler.swift', :path => '../'
-  pod 'HsToolKit.swift', git: 'https://github.com/horizontalsystems/hs-tool-kit-ios'
+  pod 'OntToolKit', git: 'https://github.com/fish-yan/OntToolKit'
   pod 'HdWalletKit.swift', git: 'https://github.com/horizontalsystems/hd-wallet-kit-ios'
   pod 'UIExtensions.swift', git: 'https://github.com/horizontalsystems/gui-kit/'
 end
@@ -17,7 +17,7 @@ def testPods
   pod 'Quick'
   pod 'Nimble'
   pod 'Cuckoo'
-  pod 'RxBlocking', '~> 5.0'
+  pod 'RxBlocking', '~> 6.0'
 end
 
 target 'BitcoinCoreTests' do

@@ -1,5 +1,5 @@
 import BitcoinCore
-import HsToolKit
+import OntToolKit
 
 class TransactionLockVoteHandler: ITransactionLockVoteHandler {
     private let requiredVoteCount: Int

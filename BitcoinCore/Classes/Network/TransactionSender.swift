@@ -1,5 +1,5 @@
 import RxSwift
-import HsToolKit
+import OntToolKit
 
 class TransactionSender {
     static let minConnectedPeersCount = 2

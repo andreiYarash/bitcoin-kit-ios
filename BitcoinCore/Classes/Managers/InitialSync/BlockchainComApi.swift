@@ -1,7 +1,7 @@
 import RxSwift
 import ObjectMapper
 import Alamofire
-import HsToolKit
+import OntToolKit
 
 public class BlockchainComApi {
     private static let paginationLimit = 100

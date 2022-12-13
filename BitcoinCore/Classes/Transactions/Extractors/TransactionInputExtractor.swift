@@ -1,5 +1,5 @@
 import OpenSslKit
-import HsToolKit
+import OntToolKit
 
 enum ScriptError: Error { case wrongScriptLength, wrongSequence }
 

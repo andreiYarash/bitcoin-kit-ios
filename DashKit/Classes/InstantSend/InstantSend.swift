@@ -1,5 +1,5 @@
 import BitcoinCore
-import HsToolKit
+import OntToolKit
 
 enum DashInventoryType: Int32 { case msgTxLockRequest = 4, msgTxLockVote = 5, msgIsLock = 30 }
 

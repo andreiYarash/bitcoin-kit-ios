@@ -1,4 +1,4 @@
-import HsToolKit
+import OntToolKit
 
 class TransactionOutputExtractor {
     let transactionKeySetter: ITransactionPublicKeySetter

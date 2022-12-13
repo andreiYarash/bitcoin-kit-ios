@@ -1,6 +1,6 @@
 import Foundation
 import HdWalletKit
-import HsToolKit
+import OntToolKit
 
 public class BitcoinCoreBuilder {
     public enum BuildError: Error { case peerSizeLessThanRequired, noSeedData, noWalletId, noNetwork, noPaymentAddressParser, noAddressSelector, noStorage, noInitialSyncApi }

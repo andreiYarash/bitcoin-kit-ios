@@ -1,7 +1,7 @@
 import BitcoinKit
 import BitcoinCore
 import HdWalletKit
-import HsToolKit
+import OntToolKit
 import RxSwift
 
 class BitcoinAdapter: BaseAdapter {

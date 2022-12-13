@@ -169,7 +169,7 @@
 		C45B20346E834C6B8A93D7EC /* Pods-BitcoinKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinKitTests.release.xcconfig"; path = "Target Support Files/Pods-BitcoinKitTests/Pods-BitcoinKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA5C17E35989902FCC31411F /* BitcoinKit.swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.podspec; name = BitcoinKit.swift.podspec; path = ../BitcoinKit.swift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CC223B703634B83592B29EE5 /* Pods-BitcoinCashKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinCashKitTests.debug.xcconfig"; path = "Target Support Files/Pods-BitcoinCashKitTests/Pods-BitcoinCashKitTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D369A2F22409238F00D6FE1E /* LitecoinKit.swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = LitecoinKit.swift.podspec; path = ../LitecoinKit.swift.podspec; sourceTree = "<group>"; };
+		D369A2F22409238F00D6FE1E /* LitecoinKit.swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = LitecoinKit.swift.podspec; path = ../LitecoinKit.swift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D36AAA7C23A2125D0065B32B /* BitcoinCashAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinCashAdapter.swift; sourceTree = "<group>"; };
 		D36AAA7D23A2125D0065B32B /* DashAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashAdapter.swift; sourceTree = "<group>"; };
 		D36AAA7E23A2125D0065B32B /* BitcoinAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinAdapter.swift; sourceTree = "<group>"; };
@@ -194,9 +194,9 @@
 		D36AAA9423A2125D0065B32B /* TransactionRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRecord.swift; sourceTree = "<group>"; };
 		D36AAAAB23A212E30065B32B /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		D39EA37F23A113EF00FF23B7 /* Hodler.swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; name = Hodler.swift.podspec; path = ../Hodler.swift.podspec; sourceTree = "<group>"; };
-		D39EA38023A113EF00FF23B7 /* DashKit.swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; name = DashKit.swift.podspec; path = ../DashKit.swift.podspec; sourceTree = "<group>"; };
-		D39EA38123A113EF00FF23B7 /* BitcoinCore.swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; name = BitcoinCore.swift.podspec; path = ../BitcoinCore.swift.podspec; sourceTree = "<group>"; };
-		D39EA38223A113EF00FF23B7 /* BitcoinCashKit.swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; name = BitcoinCashKit.swift.podspec; path = ../BitcoinCashKit.swift.podspec; sourceTree = "<group>"; };
+		D39EA38023A113EF00FF23B7 /* DashKit.swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; name = DashKit.swift.podspec; path = ../DashKit.swift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D39EA38123A113EF00FF23B7 /* BitcoinCore.swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; name = BitcoinCore.swift.podspec; path = ../BitcoinCore.swift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D39EA38223A113EF00FF23B7 /* BitcoinCashKit.swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; name = BitcoinCashKit.swift.podspec; path = ../BitcoinCashKit.swift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D39EA39923A1230000FF23B7 /* BitcoinCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitcoinCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39EA3A823A123FF00FF23B7 /* BitcoinCashKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitcoinCashKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39EA3B723A1240C00FF23B7 /* DashKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DashKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1006,28 +1006,28 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = HC4MCAXJ66;
+						DevelopmentTeam = UZT23M6T33;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = HC4MCAXJ66;
+						DevelopmentTeam = UZT23M6T33;
 						LastSwiftMigration = 1120;
 					};
 					D39EA38C23A1230000FF23B7 = {
-						DevelopmentTeam = HC4MCAXJ66;
+						DevelopmentTeam = UZT23M6T33;
 						LastSwiftMigration = 1120;
 					};
 					D39EA39B23A123FF00FF23B7 = {
-						DevelopmentTeam = HC4MCAXJ66;
+						DevelopmentTeam = UZT23M6T33;
 						LastSwiftMigration = 1120;
 					};
 					D39EA3AA23A1240C00FF23B7 = {
-						DevelopmentTeam = HC4MCAXJ66;
+						DevelopmentTeam = UZT23M6T33;
 						LastSwiftMigration = 1120;
 					};
 					D39EA3B923A1241600FF23B7 = {
-						DevelopmentTeam = HC4MCAXJ66;
+						DevelopmentTeam = UZT23M6T33;
 						LastSwiftMigration = 1120;
 					};
 				};
@@ -1682,12 +1682,13 @@
 			baseConfigurationReference = 5F8F16D600F4DF6CD20E0BAF /* Pods-BitcoinKitExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HC4MCAXJ66;
+				DEVELOPMENT_TEAM = UZT23M6T33;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BitcoinKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = org.cocoapods.demo.BitcoinKitssExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -1699,12 +1700,13 @@
 			baseConfigurationReference = F7D3B3F76026512382C0D30D /* Pods-BitcoinKitExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HC4MCAXJ66;
+				DEVELOPMENT_TEAM = UZT23M6T33;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BitcoinKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = org.cocoapods.demo.BitcoinKitssExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -1716,7 +1718,7 @@
 			baseConfigurationReference = ACD6E6BDE7C346289FAB2499 /* Pods-BitcoinKitTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = HC4MCAXJ66;
+				DEVELOPMENT_TEAM = UZT23M6T33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1740,7 +1742,7 @@
 			baseConfigurationReference = C45B20346E834C6B8A93D7EC /* Pods-BitcoinKitTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = HC4MCAXJ66;
+				DEVELOPMENT_TEAM = UZT23M6T33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1759,7 +1761,7 @@
 			baseConfigurationReference = 62C1FEEDB0512E77E56FACEC /* Pods-BitcoinCoreTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = HC4MCAXJ66;
+				DEVELOPMENT_TEAM = UZT23M6T33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1783,7 +1785,7 @@
 			baseConfigurationReference = D63B3F32063845F0AC9AD815 /* Pods-BitcoinCoreTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = HC4MCAXJ66;
+				DEVELOPMENT_TEAM = UZT23M6T33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1802,7 +1804,7 @@
 			baseConfigurationReference = CC223B703634B83592B29EE5 /* Pods-BitcoinCashKitTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = HC4MCAXJ66;
+				DEVELOPMENT_TEAM = UZT23M6T33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1826,7 +1828,7 @@
 			baseConfigurationReference = D9ABDE71F0DEF9D85F4A4A80 /* Pods-BitcoinCashKitTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = HC4MCAXJ66;
+				DEVELOPMENT_TEAM = UZT23M6T33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1845,7 +1847,7 @@
 			baseConfigurationReference = 8A7E6415B5F8A8DC1879CFA8 /* Pods-DashKitTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = HC4MCAXJ66;
+				DEVELOPMENT_TEAM = UZT23M6T33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1869,7 +1871,7 @@
 			baseConfigurationReference = FA329D8E228BBD9936928CD6 /* Pods-DashKitTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = HC4MCAXJ66;
+				DEVELOPMENT_TEAM = UZT23M6T33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1888,7 +1890,7 @@
 			baseConfigurationReference = 9D42C5E0E663DB7B00733723 /* Pods-HodlerTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = HC4MCAXJ66;
+				DEVELOPMENT_TEAM = UZT23M6T33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1912,7 +1914,7 @@
 			baseConfigurationReference = BBB9FFCB21BB700523232782 /* Pods-HodlerTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = HC4MCAXJ66;
+				DEVELOPMENT_TEAM = UZT23M6T33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

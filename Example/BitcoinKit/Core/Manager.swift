@@ -1,6 +1,6 @@
 import RxSwift
 import BitcoinCore
-import HsToolKit
+import OntToolKit
 
 class Manager {
     static let shared = Manager()

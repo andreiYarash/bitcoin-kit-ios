@@ -1,5 +1,5 @@
 import BitcoinCore
-import HsToolKit
+import OntToolKit
 
 class InstantSendLockHandler: IInstantSendLockHandler {
     private let instantTransactionManager: IInstantTransactionManager
