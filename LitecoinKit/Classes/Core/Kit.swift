@@ -19,7 +19,7 @@ public class Kit: AbstractKit {
         }
     }
 
-    public init(seed: Data, bip: Bip, walletId: String, syncMode: BitcoinCore.SyncMode = .api, networkType: NetworkType = .mainNet, confirmationsThreshold: Int = 6, logger: Logger?) throws {
+    public init(seed: Data? = nil, privateKey: Data? = nil, chainCode: Data = Data(), bip: Bip, walletId: String, syncMode: BitcoinCore.SyncMode = .api, networkType: NetworkType = .mainNet, confirmationsThreshold: Int = 6, logger: Logger?) throws {
         let network: INetwork
         let initialSyncApiUrl: String
 
@@ -72,10 +72,9 @@ public class Kit: AbstractKit {
 
         blockValidatorSet.add(blockValidator: blockValidatorChain)
 
-        let bitcoinCore = try BitcoinCoreBuilder(logger: logger)
+        var bitcoinCoreBuild = try BitcoinCoreBuilder(logger: logger)
                 .set(network: network)
                 .set(initialSyncApi: initialSyncApi)
-                .set(seed: seed)
                 .set(bip: bip)
                 .set(paymentAddressParser: paymentAddressParser)
                 .set(walletId: walletId)
@@ -84,7 +83,13 @@ public class Kit: AbstractKit {
                 .set(syncMode: syncMode)
                 .set(storage: storage)
                 .set(blockValidator: blockValidatorSet)
-                .build()
+        if let seed = seed {
+            bitcoinCoreBuild = bitcoinCoreBuild.set(seed: seed)
+        } else if let privateKey = privateKey {
+            bitcoinCoreBuild = bitcoinCoreBuild.set(privateKey: privateKey)
+                .set(chainCode: chainCode)
+        }
+        let bitcoinCore = try bitcoinCoreBuild.build()
 
         super.init(bitcoinCore: bitcoinCore, network: network)
 

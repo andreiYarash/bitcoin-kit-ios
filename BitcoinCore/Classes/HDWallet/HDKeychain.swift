@@ -10,6 +10,10 @@ public final class HDKeychain {
     public convenience init(seed: Data, xPrivKey: UInt32, xPubKey: UInt32) {
         self.init(privateKey: HDPrivateKey(seed: seed, xPrivKey: xPrivKey, xPubKey: xPubKey))
     }
+
+    public convenience init(privateKey: Data, chainCode: Data, xPrivKey: UInt32, xPubKey: UInt32) {
+        self.init(privateKey: HDPrivateKey(privateKey: privateKey, chainCode: chainCode, xPrivKey: xPrivKey, xPubKey: xPubKey))
+    }
     /// Parses the BIP32 path and derives the chain of keychains accordingly.
     /// Path syntax: (m?/)?([0-9]+'?(/[0-9]+'?)*)?
     /// The following paths are valid:

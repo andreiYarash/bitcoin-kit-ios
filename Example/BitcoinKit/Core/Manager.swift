@@ -30,6 +30,16 @@ class Manager {
         }
     }
 
+    func login(privateKey: String, syncModeIndex: Int) {
+//        save(words: words)
+        save(syncModeIndex: syncModeIndex)
+        clearKits()
+
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.initAdapters(privateKey: privateKey, syncMode: Manager.syncModes[syncModeIndex])
+        }
+    }
+
     func logout() {
         clearUserDefaults()
         adapters = []
@@ -44,6 +54,17 @@ class Manager {
             LitecoinAdapter(words: words, bip: .bip44, testMode: configuration.testNet, syncMode: syncMode, logger: logger),
             BitcoinCashAdapter(words: words, testMode: configuration.testNet, syncMode: syncMode, logger: logger),
             DashAdapter(words: words, testMode: configuration.testNet, syncMode: syncMode, logger: logger),
+        ]
+
+        adapterSignal.notify()
+    }
+
+    private func initAdapters(privateKey: String, syncMode: BitcoinCore.SyncMode) {
+        let configuration = Configuration.shared
+        let logger = Logger(minLogLevel: Configuration.shared.minLogLevel)
+
+        adapters = [
+            LitecoinAdapter(privateKey: privateKey, bip: .bip44, testMode: configuration.testNet, syncMode: syncMode, logger: logger),
         ]
 
         adapterSignal.notify()

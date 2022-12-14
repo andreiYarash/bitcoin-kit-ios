@@ -10,6 +10,8 @@ public class BitcoinCoreBuilder {
 
     // required parameters
     private var seed: Data?
+    private var privateKey: Data?
+    private var chainCode: Data = Data()
     private var bip: Bip = .bip44
     private var network: INetwork?
     private var paymentAddressParser: IPaymentAddressParser?
@@ -32,6 +34,16 @@ public class BitcoinCoreBuilder {
 
     public func set(seed: Data) -> BitcoinCoreBuilder {
         self.seed = seed
+        return self
+    }
+
+    public func set(privateKey: Data) -> BitcoinCoreBuilder {
+        self.privateKey = privateKey
+        return self
+    }
+
+    public func set(chainCode: Data) -> BitcoinCoreBuilder {
+        self.chainCode = chainCode
         return self
     }
 
@@ -109,12 +121,7 @@ public class BitcoinCoreBuilder {
     }
 
     public func build() throws -> BitcoinCore {
-        let seed: Data
-        if let selfSeed = self.seed {
-           seed = selfSeed
-        } else {
-            throw BuildError.noSeedData
-        }
+
         guard let network = self.network else {
             throw BuildError.noNetwork
         }
@@ -142,7 +149,14 @@ public class BitcoinCoreBuilder {
 
         let reachabilityManager = ReachabilityManager()
 
-        let hdWallet = HDWallet(seed: seed, coinType: network.coinType, xPrivKey: network.xPrivKey, xPubKey: network.xPubKey, gapLimit: 20, purpose: bip.purpose)
+        var hdWallet: HDWallet
+        if let seed = self.seed {
+            hdWallet = HDWallet(seed: seed, coinType: network.coinType, xPrivKey: network.xPrivKey, xPubKey: network.xPubKey, gapLimit: 20, purpose: bip.purpose)
+        } else if let privateKey = self.privateKey {
+            hdWallet = HDWallet(privateKey: privateKey, chainCode: chainCode, coinType: network.coinType, xPrivKey: network.xPrivKey, xPubKey: network.xPubKey, gapLimit: 20, purpose: bip.purpose)
+        } else {
+            throw BuildError.noSeedData
+        }
 
         let networkMessageParser = NetworkMessageParser(magic: network.magic)
         let networkMessageSerializer = NetworkMessageSerializer(magic: network.magic)

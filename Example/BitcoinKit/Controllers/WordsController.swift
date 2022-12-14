@@ -3,6 +3,7 @@ import BitcoinCore
 
 class WordsController: UIViewController {
 
+    @IBOutlet weak var privateKeyView: UITextView!
     @IBOutlet weak var textView: UITextView?
     @IBOutlet weak var wordListControl: UISegmentedControl!
     @IBOutlet weak var syncModeListControl: UISegmentedControl!
@@ -50,12 +51,17 @@ class WordsController: UIViewController {
 
     @IBAction func login() {
         let words = textView?.text.components(separatedBy: .whitespacesAndNewlines).filter { !$0.isEmpty } ?? []
+        let privateKey = textView?.text ?? ""
 
         do {
-            try Mnemonic.validate(words: words)
+            if !words.isEmpty {
+                try Mnemonic.validate(words: words)
 
-            Manager.shared.login(words: words, syncModeIndex: syncModeListControl.selectedSegmentIndex)
+                Manager.shared.login(words: words, syncModeIndex: syncModeListControl.selectedSegmentIndex)
 
+            } else {
+                Manager.shared.login(privateKey: privateKey, syncModeIndex: syncModeListControl.selectedSegmentIndex)
+            }
             if let window = UIApplication.shared.keyWindow {
                 UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
                     window.rootViewController = MainController()
