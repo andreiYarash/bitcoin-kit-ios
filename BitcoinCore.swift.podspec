@@ -22,7 +22,7 @@ BitcoinCore implements Bitcoin core protocol in Swift. It is an implementation o
   s.dependency 'OpenSslKit.swift', '~> 1.0'
   s.dependency 'Secp256k1Kit.swift', '~> 1.0'
   s.dependency 'OntToolKit'
-  s.dependency 'UIExtensions.swift', '~> 1.1.1'
+#  s.dependency 'UIExtensions.swift', '~> 1.1.1'
 
   s.dependency 'ObjectMapper', '~> 4.0'
   s.dependency 'RxSwift', '~> 6.0'

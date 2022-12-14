@@ -1,6 +1,6 @@
 import RxSwift
 import GRDB
-import UIExtensions
+// import UIExtensions
 
 open class GrdbStorage {
     public var dbPool: DatabasePool
@@ -361,7 +361,7 @@ open class GrdbStorage {
                   SELECT inputs.*, outputs.*
                   FROM inputs
                   LEFT JOIN outputs ON inputs.previousOutputTxHash = outputs.transactionHash AND inputs.previousOutputIndex = outputs."index"
-                  WHERE inputs.transactionHash IN (\(transactionHashes.map({ "x'" + $0.hex + "'" }).joined(separator: ",")))
+                  WHERE inputs.transactionHash IN (\(transactionHashes.map({ "x'" + $0.bithex + "'" }).joined(separator: ",")))
                   """
         let rows = try Row.fetchCursor(db, sql: sql, adapter: adapter)
 
@@ -816,7 +816,7 @@ extension GrdbStorage: IStorage {
                       SELECT transactions.*, blocks.height as blockHeight
                       FROM transactions
                       LEFT JOIN blocks ON transactions.blockHash = blocks.headerHash
-                      WHERE transactions.dataHash = \("x'" + hash.hex + "'")                    
+                      WHERE transactions.dataHash = \("x'" + hash.bithex + "'")                    
                       """
 
             let rows = try Row.fetchCursor(db, sql: sql, adapter: adapter)

@@ -1,4 +1,4 @@
-import UIExtensions
+//// import UIExtensions
 
 public protocol IBaseTransactionInfoConverter {
     func transactionInfo<T: BitTransactionInfo>(fromTransaction transactionForInfo: FullTransactionForInfo) -> T

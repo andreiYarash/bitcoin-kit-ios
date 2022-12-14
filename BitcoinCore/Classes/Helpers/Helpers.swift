@@ -1,12 +1,12 @@
 import Foundation
-import UIExtensions
+// import UIExtensions
 
 func ipv4(from data: Data) -> String {
     return Data(data.dropFirst(12)).map { String($0) }.joined(separator: ".")
 }
 
 func ipv6(from data: Data) -> String {
-    return stride(from: 0, to: data.count - 1, by: 2).map { Data([data[$0], data[$0 + 1]]).hex }.joined(separator: ":")
+    return stride(from: 0, to: data.count - 1, by: 2).map { Data([data[$0], data[$0 + 1]]).bithex }.joined(separator: ":")
 }
 
 func pton(_ address: String) -> Data {

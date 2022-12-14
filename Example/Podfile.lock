@@ -19,7 +19,6 @@ PODS:
     - RxSwift (~> 6.0)
     - Secp256k1Kit.swift (~> 1.0)
     - SwiftNIO (~> 2)
-    - UIExtensions.swift (~> 1.1.1)
   - BitcoinKit.swift (0.18):
     - BigInt (~> 5.0)
     - BitcoinCore.swift (~> 0.18)
@@ -174,7 +173,6 @@ PODS:
     - SwiftNIOEmbedded (= 2.40.0)
     - SwiftNIOHTTP1 (= 2.40.0)
     - SwiftNIOPosix (= 2.40.0)
-  - UIExtensions.swift (1.1.1)
   - X11Kit.swift (1.0)
 
 DEPENDENCIES:
@@ -189,7 +187,6 @@ DEPENDENCIES:
   - OntToolKit (from `https://github.com/fish-yan/OntToolKit`)
   - Quick
   - RxBlocking (~> 6.0)
-  - UIExtensions.swift (from `https://github.com/horizontalsystems/gui-kit/`)
 
 SPEC REPOS:
   trunk:
@@ -241,23 +238,18 @@ EXTERNAL SOURCES:
     :path: "../"
   OntToolKit:
     :git: https://github.com/fish-yan/OntToolKit
-  UIExtensions.swift:
-    :git: https://github.com/horizontalsystems/gui-kit/
 
 CHECKOUT OPTIONS:
   OntToolKit:
     :commit: 05ab49d635605e2795fe23e6acf43c65306bdfc2
     :git: https://github.com/fish-yan/OntToolKit
-  UIExtensions.swift:
-    :commit: bb4f7adaa7d0b341a3c535a28e2e8368fb0a32b2
-    :git: https://github.com/horizontalsystems/gui-kit/
 
 SPEC CHECKSUMS:
   _NIODataStructures: 3d45d8e70a1d17a15b1dc59d102c63dbc0525ffd
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   BigInt: f668a80089607f521586bbe29513d708491ef2f7
   BitcoinCashKit.swift: a19d5057e53a6d98274a455f322ecfec12000594
-  BitcoinCore.swift: 7eea61b71ab6f2317392d28548c208ff3bd113f9
+  BitcoinCore.swift: 41145097e4bb1a8712e79c4fcfd6330a2a3ee1fc
   BitcoinKit.swift: 97dd3683e5b758ed08152cfe6c276aa5dae488ce
   BlsKit.swift: e73fb332ed6a577b0f34a0da30aa5ec6c09bee55
   CNIOAtomics: 8edf08644e5e6fa0f021c239be9e8beb1cd9ef18
@@ -291,9 +283,8 @@ SPEC CHECKSUMS:
   SwiftNIOSSL: d153c5a6fc5b2301b0519b4c4d037a9414212da6
   SwiftNIOTLS: 598af547490133e9aac52aed0c23c4a90c31dcfc
   SwiftNIOWebSocket: cb67e4bf1b9f6895d2103b15d8369f8504ea42da
-  UIExtensions.swift: 3ed084c0343ddd0f86c7c558d37759e1fd7d5778
   X11Kit.swift: 6cfd05473e41c7b866c1a016300da02af63ad049
 
-PODFILE CHECKSUM: 07e66199021acb9ea70e0b5cb4f3621d34ce9712
+PODFILE CHECKSUM: 5ff49adfd5d767f4c9c8fbb1b2175df78c03c89c
 
 COCOAPODS: 1.11.3

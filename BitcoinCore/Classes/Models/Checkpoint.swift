@@ -1,4 +1,4 @@
-import UIExtensions
+// import UIExtensions
 
 public struct Checkpoint {
     public let block: Block
@@ -32,7 +32,7 @@ public struct Checkpoint {
     }
 
     private static func readBlock(string: String) throws -> Block {
-        guard let data = Data(hex: string) else {
+        guard let data = Data(bithex: string) else {
             throw ParseError.invalidFile
         }
 

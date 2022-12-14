@@ -175,7 +175,7 @@ extension Kit: BitcoinCoreDelegate {
 
     public func transactionsUpdated(inserted: [BitTransactionInfo], updated: [BitTransactionInfo]) {
         // check for all new transactions if it's has instant lock
-        inserted.compactMap { Data(hex : $0.transactionHash) }.forEach { instantSend?.handle(insertedTxHash: $0) }
+        inserted.compactMap { Data(bithex : $0.transactionHash) }.forEach { instantSend?.handle(insertedTxHash: $0) }
 
         delegate?.transactionsUpdated(inserted: cast(transactionInfos: inserted), updated: cast(transactionInfos: updated))
     }

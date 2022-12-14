@@ -1,4 +1,4 @@
-import UIExtensions
+// import UIExtensions
 
 public struct TransactionMessage: IMessage {
     let transaction: FullTransaction

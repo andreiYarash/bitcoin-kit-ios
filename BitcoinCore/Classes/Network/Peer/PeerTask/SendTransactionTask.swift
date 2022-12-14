@@ -1,5 +1,5 @@
 import Foundation
-import UIExtensions
+// import UIExtensions
 
 class SendTransactionTask: PeerTask {
 

@@ -1,4 +1,4 @@
-import UIExtensions
+// import UIExtensions
 
 struct GetBlocksMessage: IMessage {
     /// the protocol version

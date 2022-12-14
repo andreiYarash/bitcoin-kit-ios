@@ -1,5 +1,5 @@
 import OpenSslKit
-import UIExtensions
+// import UIExtensions
 
 public struct BlockHeader {
 
@@ -116,7 +116,7 @@ public struct FullTransactionForInfo {
                 outputs: outputs
         )
 
-        return TransactionSerializer.serialize(transaction: fullTransaction).hex
+        return TransactionSerializer.serialize(transaction: fullTransaction).bithex
     }
 
 }

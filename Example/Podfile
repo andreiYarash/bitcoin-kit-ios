@@ -9,7 +9,7 @@ target 'BitcoinKitExample' do
   pod 'LitecoinKit.swift', :path => '../'
   pod 'Hodler.swift', :path => '../'
   pod 'OntToolKit', git: 'https://github.com/fish-yan/OntToolKit'
-  pod 'UIExtensions.swift', git: 'https://github.com/horizontalsystems/gui-kit/'
+#  pod 'UIExtensions.swift', git: 'https://github.com/horizontalsystems/gui-kit/'
 end
 
 def testPods

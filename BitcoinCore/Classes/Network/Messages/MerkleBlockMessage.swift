@@ -1,4 +1,4 @@
-import UIExtensions
+// import UIExtensions
 
 struct MerkleBlockMessage: IMessage {
     let blockHeader: BlockHeader

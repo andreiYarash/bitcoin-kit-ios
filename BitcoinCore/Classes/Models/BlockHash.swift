@@ -1,5 +1,5 @@
 import GRDB
-import UIExtensions
+// import UIExtensions
 
 public class BlockHash: Record {
     let headerHash: Data
@@ -15,7 +15,7 @@ public class BlockHash: Record {
     }
 
     init?(headerHashReversedHex: String?, height: Int?, sequence: Int) {
-        guard let hex = headerHashReversedHex, let height = height, let headerHash = Data(hex: hex) else {
+        guard let hex = headerHashReversedHex, let height = height, let headerHash = Data(bithex: hex) else {
             return nil
         }
 
