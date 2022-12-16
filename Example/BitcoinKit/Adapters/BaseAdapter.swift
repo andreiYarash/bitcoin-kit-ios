@@ -125,6 +125,18 @@ extension BaseAdapter {
         abstractKit.receiveAddress()
     }
 
+    func changeAddress() -> String {
+        abstractKit.changeAddress()
+    }
+
+    func receivePublicKey() -> PublicKey {
+        try! abstractKit.receivePublicKey()
+    }
+
+    func pubkey(path: String) -> PublicKey {
+        try! abstractKit.publicKey(byPath: path)
+    }
+
     func validate(address: String) throws {
         try abstractKit.validate(address: address)
     }

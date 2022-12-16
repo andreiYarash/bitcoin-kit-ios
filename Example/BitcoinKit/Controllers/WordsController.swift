@@ -3,6 +3,7 @@ import BitcoinCore
 
 class WordsController: UIViewController {
 
+    @IBOutlet weak var networkControl: UISegmentedControl!
     @IBOutlet weak var privateKeyView: UITextView!
     @IBOutlet weak var textView: UITextView?
     @IBOutlet weak var wordListControl: UISegmentedControl!
@@ -20,6 +21,9 @@ class WordsController: UIViewController {
         updateWordListControl()
     }
 
+    @IBAction func networkControlAction(_ sender: UISegmentedControl) {
+        Configuration.shared.testNet = sender.selectedSegmentIndex == 0
+    }
     func updateWordListControl() {
         let accountCount = Configuration.shared.defaultWords.count
         guard accountCount > 1 else {

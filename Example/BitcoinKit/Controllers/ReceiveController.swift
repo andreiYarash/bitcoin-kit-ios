@@ -5,6 +5,8 @@ import BitcoinCore
 class ReceiveController: UIViewController {
     private let disposeBag = DisposeBag()
 
+    @IBOutlet weak var receivedAddTF: UITextField!
+    @IBOutlet weak var changeAddTF: UITextField!
     @IBOutlet weak var addressLabel: UILabel?
 
     private var adapters = [BaseAdapter]()
@@ -58,6 +60,8 @@ class ReceiveController: UIViewController {
     }
     func updateAddress() {
         addressLabel?.text = "  \(currentAdapter?.receiveAddress() ?? "")  "
+        receivedAddTF.text = currentAdapter?.receiveAddress()
+        changeAddTF.text = currentAdapter?.changeAddress()
     }
 
     @IBAction func onAddressTypeChanged(_ sender: Any) {
