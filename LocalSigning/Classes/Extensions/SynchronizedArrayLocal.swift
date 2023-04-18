@@ -1,11 +1,11 @@
 /// A thread-safe array.
-public class SynchronizedArray<Element> {
+public class SynchronizedArray_Local_Usage<Element> {
     fileprivate let queue = DispatchQueue(label: "io.SynchronizedArray", attributes: .concurrent)
     fileprivate var array = [Element]()
 }
 
 // MARK: - Properties
-public extension SynchronizedArray {
+public extension SynchronizedArray_Local_Usage {
 
     /// The first element of the collection.
     var first: Element? {
@@ -44,7 +44,7 @@ public extension SynchronizedArray {
 }
 
 // MARK: - Immutable
-public extension SynchronizedArray {
+public extension SynchronizedArray_Local_Usage {
     /// Returns the first element of the sequence that satisfies the given predicate or nil if no such element is found.
     ///
     /// - Parameter predicate: A closure that takes an element of the sequence as its argument and returns a Boolean value indicating whether the element is a match.
@@ -114,7 +114,7 @@ public extension SynchronizedArray {
 }
 
 // MARK: - Mutable
-public extension SynchronizedArray {
+public extension SynchronizedArray_Local_Usage {
 
     /// Adds a new element at the end of the array.
     ///
@@ -191,7 +191,7 @@ public extension SynchronizedArray {
     }
 }
 
-public extension SynchronizedArray {
+public extension SynchronizedArray_Local_Usage {
 
     /// Accesses the element at the specified position if it exists.
     ///
@@ -220,7 +220,7 @@ public extension SynchronizedArray {
 
 
 // MARK: - Equatable
-public extension SynchronizedArray where Element: Equatable {
+public extension SynchronizedArray_Local_Usage where Element: Equatable {
 
     /// Returns a Boolean value indicating whether the sequence contains the given element.
     ///
@@ -234,13 +234,13 @@ public extension SynchronizedArray where Element: Equatable {
 }
 
 // MARK: - Infix operators
-public extension SynchronizedArray {
+public extension SynchronizedArray_Local_Usage {
 
-    static func +=(left: inout SynchronizedArray, right: Element) {
+    static func +=(left: inout SynchronizedArray_Local_Usage, right: Element) {
         left.append(right)
     }
 
-    static func +=(left: inout SynchronizedArray, right: [Element]) {
+    static func +=(left: inout SynchronizedArray_Local_Usage, right: [Element]) {
         left.append(right)
     }
 }

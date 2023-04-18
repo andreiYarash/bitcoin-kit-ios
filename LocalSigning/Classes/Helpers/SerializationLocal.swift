@@ -1,16 +1,12 @@
 import Foundation
 
 public extension Data {
-    init<T>(from value: T) {
-        var value = value
-        self.init(buffer: UnsafeBufferPointer(start: &value, count: 1))
-    }
 
-    func to<T>(type: T.Type) -> T {
+    func to_Local_Usage<T>(type: T.Type) -> T {
         return self.withUnsafeBytes { $0.baseAddress!.assumingMemoryBound(to: T.self).pointee }
     }
 
-    func to(type: String.Type) -> String {
+    func to_Local_Usage(type: String.Type) -> String {
         return String(bytes: self, encoding: .ascii)!.replacingOccurrences(of: "\0", with: "")
     }
 

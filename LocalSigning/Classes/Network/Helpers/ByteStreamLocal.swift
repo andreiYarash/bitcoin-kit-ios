@@ -32,7 +32,7 @@ public class ByteStream_Local_Usage {
     }
 
     public func read(_ type: VarInt_Local_Usage.Type) -> VarInt_Local_Usage {
-        let len = data[offset..<(offset + 1)].to(type: UInt8.self)
+        let len = data[offset..<(offset + 1)].to_Local_Usage(type: UInt8.self)
         let length: UInt64
         switch len {
         case 0...252:
@@ -40,19 +40,19 @@ public class ByteStream_Local_Usage {
             offset += 1
         case 0xfd:
             offset += 1
-            length = UInt64(data[offset..<(offset + 2)].to(type: UInt16.self))
+            length = UInt64(data[offset..<(offset + 2)].to_Local_Usage(type: UInt16.self))
             offset += 2
         case 0xfe:
             offset += 1
-            length = UInt64(data[offset..<(offset + 4)].to(type: UInt32.self))
+            length = UInt64(data[offset..<(offset + 4)].to_Local_Usage(type: UInt32.self))
             offset += 4
         case 0xff:
             offset += 1
-            length = UInt64(data[offset..<(offset + 8)].to(type: UInt64.self))
+            length = UInt64(data[offset..<(offset + 8)].to_Local_Usage(type: UInt64.self))
             offset += 8
         default:
             offset += 1
-            length = UInt64(data[offset..<(offset + 8)].to(type: UInt64.self))
+            length = UInt64(data[offset..<(offset + 8)].to_Local_Usage(type: UInt64.self))
             offset += 8
         }
         return VarInt_Local_Usage(length)

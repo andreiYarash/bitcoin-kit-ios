@@ -1,15 +1,15 @@
 import Foundation
 //import UIExtensions
 
-func ipv4(from data: Data) -> String {
+func ipv4_Local_Usage(from data: Data) -> String {
     return Data(data.dropFirst(12)).map { String($0) }.joined(separator: ".")
 }
 
-func ipv6(from data: Data) -> String {
+func ipv6_Local_Usage(from data: Data) -> String {
     return stride(from: 0, to: data.count - 1, by: 2).map { Data([data[$0], data[$0 + 1]]).hex }.joined(separator: ":")
 }
 
-func pton(_ address: String) -> Data {
+func pton_Local_Usage(_ address: String) -> Data {
     var addr = in6_addr()
     _ = withUnsafeMutablePointer(to: &addr) {
         inet_pton(AF_INET6, address, UnsafeMutablePointer($0))
@@ -19,7 +19,7 @@ func pton(_ address: String) -> Data {
     return buffer
 }
 
-func byteArrayLittleEndian(int: Int) -> [UInt8] {
+func byteArrayLittleEndian_Local_Usage(int: Int) -> [UInt8] {
     return [
         UInt8(int & 0x000000FF),
         UInt8((int & 0x0000FF00) >> 8),

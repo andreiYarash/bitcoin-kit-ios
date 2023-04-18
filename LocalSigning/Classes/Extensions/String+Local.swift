@@ -15,7 +15,7 @@ extension String {
         return CGSize(width: ceil(size.width), height: ceil(size.height))
     }
 
-    public func stripHexPrefix() -> String {
+    public func stripHexPrefix_Local_Usage() -> String {
         let prefix = "0x"
 
         if self.hasPrefix(prefix) {
@@ -25,7 +25,7 @@ extension String {
         return self
     }
     
-    public var reversedData: Data? {
+    public var reversedData_Local_Usage: Data? {
         return Data(hex: self).map { Data($0.reversed()) }
     }
 

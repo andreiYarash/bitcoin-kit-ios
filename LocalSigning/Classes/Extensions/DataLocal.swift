@@ -5,7 +5,7 @@ import CommonCrypto
 extension Data {
     
     init?(hex: String) {
-        let hex = hex.stripHexPrefix()
+        let hex = hex.stripHexPrefix_Local_Usage()
         
         let len = hex.count / 2
         var data = Data(capacity: len)
@@ -26,7 +26,7 @@ extension Data {
         reduce("") { $0 + String(format: "%02x", $1) }
     }
     
-    var reversedHex: String {
+    var reversedHex_Local_Usage: String {
         Data(self.reversed()).hex
     }
     
