@@ -76,37 +76,37 @@ extension Bip49RestoreKeyConverter : IRestoreKeyConverter {
 
 public class Bip84RestoreKeyConverter {
 
-    let addressConverter: IAddressConverter_Local_Usage
+    let addressConverter: IAddressConverter
 
-    public init(addressConverter: IAddressConverter_Local_Usage) {
+    public init(addressConverter: IAddressConverter) {
         self.addressConverter = addressConverter
     }
 
 }
 
-extension Bip84RestoreKeyConverter : IRestoreKeyConverter_Local_Usage {
+extension Bip84RestoreKeyConverter : IRestoreKeyConverter {
 
-    public func keysForApiRestore(publicKey: PublicKey_Local_Usage) -> [String] {
+    public func keysForApiRestore(publicKey: PublicKey) -> [String] {
         let segwitAddress = try? addressConverter.convert(publicKey: publicKey, type: .p2wpkh).stringValue
 
         return [segwitAddress].compactMap { $0 }
     }
 
-    public func bloomFilterElements(publicKey: PublicKey_Local_Usage) -> [Data] {
+    public func bloomFilterElements(publicKey: PublicKey) -> [Data] {
         [publicKey.keyHash]
     }
 
 }
 
-public class KeyHashRestoreKeyConverter : IRestoreKeyConverter_Local_Usage {
+public class KeyHashRestoreKeyConverter : IRestoreKeyConverter {
 
     public init() {}
 
-    public func keysForApiRestore(publicKey: PublicKey_Local_Usage) -> [String] {
+    public func keysForApiRestore(publicKey: PublicKey) -> [String] {
         [publicKey.keyHash.bithex]
     }
 
-    public func bloomFilterElements(publicKey: PublicKey_Local_Usage) -> [Data] {
+    public func bloomFilterElements(publicKey: PublicKey) -> [Data] {
         [publicKey.keyHash]
     }
 

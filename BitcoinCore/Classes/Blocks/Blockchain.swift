@@ -82,7 +82,7 @@ extension Blockchain: IBlockchain {
 
     func deleteBlocks(blocks: [Block]) throws {
         let hashes =  blocks.reduce(into: [String](), { acc, block in
-            acc.append(contentsOf: storage.transactions(ofBlock: block).map { $0.dataHash.reversedHex_Local_Usage })
+            acc.append(contentsOf: storage.transactions(ofBlock: block).map { $0.dataHash.reversedHex })
         })
 
         try storage.delete(blocks: blocks)
