@@ -69,8 +69,8 @@ extension UnspentOutputSelector_Local_Usage: IUnspentOutputSelector_Local_Usage 
             }
             fee = calculator.transactionSize(previousOutputs: selectedOutputs.map { $0.output }, outputScriptTypes: [outputScriptType], pluginDataOutputSize: pluginDataOutputSize) * feeRate
 
-            recipientValue = senderPay ? value : value - fee
-            sentValue = senderPay ? value + fee : value
+            recipientValue = senderPay ? value : value - feeRate
+            sentValue = senderPay ? value + feeRate : value
 
             if sentValue <= totalValue {      // totalValue is enough
                 if recipientValue >= recipientOutputDust {   // receivedValue won't be dust
