@@ -67,7 +67,7 @@ extension UnspentOutputSelector_Local_Usage: IUnspentOutputSelector_Local_Usage 
                     totalValue -= outputValueToExclude
                 }
             }
-            fee = calculator.transactionSize(previousOutputs: selectedOutputs.map { $0.output }, outputScriptTypes: [outputScriptType], pluginDataOutputSize: pluginDataOutputSize) * feeRate
+//            fee = calculator.transactionSize(previousOutputs: selectedOutputs.map { $0.output }, outputScriptTypes: [outputScriptType], pluginDataOutputSize: pluginDataOutputSize) * feeRate
 
             recipientValue = senderPay ? value : value - feeRate
             sentValue = senderPay ? value + feeRate : value

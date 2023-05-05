@@ -44,6 +44,23 @@ extension TransactionSigner_Local_Usage: ITransactionSigner_Local_Usage {
 					inputToSign.input.witnessData = [Data(), sigScriptData[0], redeemScript]
 				} else {
 					inputToSign.input.witnessData = sigScriptData
+//                    var sigScript = sigScriptData.map { dataValue -> Data in
+//                        var data = Data()
+//                        data += OpCode_Local_Usage.dup
+//                        data += OpCode_Local_Usage.hash160
+//                        data += inputToSign.input.keyHash ?? Data()
+//                        data += OpCode_Local_Usage.equalVerify
+//                       //
+//                        data += OpCode_Local_Usage.checkSigVerify
+//                        data += OpCode_Local_Usage.push(1)
+//                        return data
+//                    }
+    
+                    print("Final Signuture is: \(signatures[index].hex)")
+                   // inputToSign.input.signatureScript = signatureScript(from: sigScriptData)
+                    
+                    //inputToSign.input.keyHash = publicKey.keyHash
+                    
 				}
             case .p2wpkhSh:
                 mutableTransaction.transaction.segWit = true

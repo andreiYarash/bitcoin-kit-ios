@@ -69,7 +69,6 @@ extension InputSetter_Local_Usage: IInputSetter_Local_Usage {
 
         // Add change output if needed
         if let changeValue = unspentOutputInfo.changeValue {
-            print("ChangeScriptTYPE: \(changeScriptType.nativeSegwit)")
             if let changeScr = changeScript, case .p2wsh = changeScriptType {
                 let converter = SegWitBech32AddressConverter_Local_Usage(prefix: BitcoinNetwork.mainnet.networkParams.bech32PrefixPattern, scriptConverter: ScriptConverter_Local_Usage())
                 mutableTransaction.changeAddress = try converter.convert(scriptHash: changeScr)
@@ -94,7 +93,6 @@ extension InputSetter_Local_Usage: IInputSetter_Local_Usage {
         // Calculate fee
         let transactionSize = transactionSizeCalculator.transactionSize(previousOutputs: [unspentOutput.output], outputScriptTypes: [mutableTransaction.recipientAddress.scriptType], pluginDataOutputSize: 0)
         let fee = transactionSize * feeRate
-
         guard fee < unspentOutput.output.value else {
             throw UnspentOutputError.feeMoreThanValue
         }
